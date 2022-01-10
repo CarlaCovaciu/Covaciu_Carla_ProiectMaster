@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Covaciu_Carla_Proiect.Models.StoreViewModel.OrderGroup>
+@{
+    ViewData["Title"] = "Ordered Phones Statistics";
+}
+<h2>Ordered Phones Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Ordered Phoned
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @item.PhoneCount
+            </td>
+        </tr>
+    }
+</table>
+
